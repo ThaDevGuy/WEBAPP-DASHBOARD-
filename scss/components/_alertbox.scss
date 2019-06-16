@@ -1,0 +1,27 @@
+.alert-box {
+    padding: 1rem 1.5rem;
+    margin-right: 2rem;
+    margin-left: 2rem;
+    border-radius: .5rem;
+    @include flexy($justify: space-between){
+        align-items: center;
+    }
+
+     &__info {
+
+        span {
+            white-space: pre-wrap;
+        }
+       
+    }
+    .cross {
+        background-color: transparent;
+        border: none;
+    }
+    .icon {
+        width: 2rem;
+        height: 2rem;
+        cursor: pointer;
+    }
+
+}

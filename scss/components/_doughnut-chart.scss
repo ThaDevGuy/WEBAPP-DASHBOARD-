@@ -1,0 +1,12 @@
+.doughnut-chart-box {
+    padding: 2rem 2rem 3rem 2rem;
+    @include mq($rowbreak){
+        padding-right: 0;
+    }
+
+    .canvas-box {
+        position: relative;
+        margin-top: 3rem;
+        width: 100%;
+    }
+}

@@ -1,0 +1,32 @@
+.iconized-list{
+    .list-box {
+         position: relative;
+         margin-top: 2rem;
+         padding-left: 5rem;
+        &::before {
+             content: "";
+             background-size: cover;
+             background-position: center;
+             background-repeat: no-repeat;
+             display: block;
+             width: 4rem;
+             height: 4rem;
+             border-radius: 50%;
+             position: absolute;
+             top: -.4rem;
+             left: 0;
+        }
+    }
+    .list-box:not(:last-child) {
+         padding-bottom: 2rem; 
+         border-bottom: $border-light;
+    }
+    
+    //loop for iconized background
+    @for $i from 1 through 4 {
+         .list-box:nth-of-type(n+#{$i})::before {
+         background-image: url(../images/member-#{$i}.jpg);
+         }
+     }
+ }
+ 

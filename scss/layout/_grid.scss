@@ -1,0 +1,40 @@
+.main-grid {
+    @include mq (768px) {
+        width:100%;
+        display: grid;
+        grid-template-columns: 8.5rem 1fr;
+        grid-template-rows: 7.5rem auto;
+        grid-template-areas: 
+        "header header"
+        "nav main";
+
+        .header {
+            grid-area: header;
+        }
+        
+        .side-nav {
+            grid-area: nav;
+        }
+        
+        .sec-grid {
+            grid-area: main;
+            position: relative;
+        }
+    }
+    
+}
+
+
+
+
+div.row:not(:nth-last-of-type(2)) {
+    @include mq($rowbreak) {
+        @include rowstyles;
+    }
+}
+
+div.row:nth-last-of-type(2) {
+    @include mq($rowbreakmid) {
+        @include rowstyles;
+    }
+}

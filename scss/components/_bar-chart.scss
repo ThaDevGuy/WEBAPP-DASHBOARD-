@@ -1,0 +1,14 @@
+.bar-chart-box {
+    padding: 2rem 2rem 3rem 2rem;
+    @include mq($rowbreak){
+        padding-right: 2rem;
+        padding-left: 0;
+        border-right: $border-light;
+    }
+
+    .canvas-box {
+        position: relative;
+        margin-top: 3rem;
+        width: 100%;
+    }
+}

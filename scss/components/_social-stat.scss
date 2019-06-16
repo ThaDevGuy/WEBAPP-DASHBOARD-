@@ -1,0 +1,70 @@
+.social-stats {
+    padding: 0 2rem 2rem 2rem;
+
+    .cards-box {
+        text-align: center;
+        @include flexy($justify: space-between, $wrap: wrap);
+
+
+        .card {
+            margin-top: 2rem;
+            padding: 1.5rem 2rem;
+            border: $border-light;
+            border-radius: .4rem;
+            width: 100%;
+
+            @include flexy($justify: center){
+                align-items: center;
+            }
+            
+            @include mq(480px) {
+                width: 47.5%;
+            }
+            
+            @include mq(768px) {
+                margin-top: 0rem;
+                width: 31.5%;
+            }
+        }
+
+        // .card:not(:last-child){
+        //     margin-right: 2rem;
+        // }
+
+        .icon-box {
+            background-color: $color-main;
+            display: inline-block;
+            width: 6rem;
+            height: 6rem;
+            margin-right: 1.5rem;
+            border-radius: 50%;
+            position: relative;
+
+            .icon {
+                width: 3rem;
+                height: 3rem;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        .text-box {
+            display: block;
+            margin-bottom: -1.5rem;
+
+            .card__heading {
+                text-align: left;
+                margin-bottom: -1rem;
+            }
+        }
+    }
+
+
+
+
+
+
+
+}

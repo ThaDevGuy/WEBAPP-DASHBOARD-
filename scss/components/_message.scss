@@ -1,0 +1,45 @@
+.message {
+    @extend %col-left;
+    padding-left: 2rem;
+    @include mq($rowbreak) {
+        padding-left: 0;
+    }
+
+    .heading-tertiary {
+        margin-bottom: 3rem;
+    }
+
+    &-form {
+        position: relative;
+        margin-top: 2rem;
+        .search-input {
+            display: block;
+            @extend %form-text;
+        }
+        .textarea {
+            margin-top: 4rem;
+            @extend %form-text;
+        }
+        .form-button  {
+            margin-top: 2rem;
+        }
+
+        .searchResult {
+            position: absolute;
+            top: 3.7rem;
+            left: 0;
+            z-index: 100;
+            width: 100%;
+            color: white;
+        }
+
+        .searchResultItem  {
+            background-color: #666666;
+            padding: 1rem;
+            width: 100%;
+            border: 1px solid $color-white;
+            font-size: 1.8rem;
+        }
+        
+    }
+}

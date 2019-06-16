@@ -1,0 +1,15 @@
+$color-main: #62629B;
+$color-white: white;
+$color-grey: grey;
+$color-light: lighten($color-grey, 35%);
+$color-text: #666363;
+$color-accent: #78c750;
+
+
+
+
+$rowbreak: 850px;
+$rowbreakmid: 980px;
+
+$border-dark: .5px solid darken($color-main, 20%);
+$border-light: .5px solid $color-light;

@@ -1,0 +1,74 @@
+.btn-icon  {
+    outline: none;
+    background-color: transparent;
+    border: none;
+}
+.u_margtop {
+    margin-top: 3rem;
+}
+
+.u_margtop-sm {
+    margin-top: 2rem;
+}
+
+.active {
+    padding: .8rem 1rem;
+    border-radius: 5rem;
+    background-color: $color-accent;
+    color: $color-white;
+    @include mq(768px) {
+        padding: .5rem 1rem;
+    }
+}
+
+
+.notificationList {
+    background-color: $color-white;
+    @include mq(600px){
+        width: 40rem;
+        margin-left: auto;
+        position: absolute;
+        right: 0;
+        z-index: 100;
+    }
+
+    .notificationListItem {
+        @include flexy($justify: space-between);
+        padding: 1.5rem;
+        border: $border-light;
+        color: $color-text;
+
+        .crossButton {
+            font-size: 2.3rem;
+        }
+    }
+}
+
+
+.hide {
+    display: none;
+    visibility: hidden;
+}
+
+.show {
+    display: block;
+    visibility: visible;
+}
+
+.confirmation {
+    padding: .5rem 1rem;
+    font-size: 1.5rem;
+    margin: 3rem 0;
+    text-align: center;
+    color: white;
+    border-radius: .4rem;
+}
+
+.error {
+    background-color: tomato;
+}
+
+.success {
+    background-color: $color-accent;
+}
+

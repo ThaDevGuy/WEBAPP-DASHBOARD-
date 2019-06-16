@@ -1,0 +1,51 @@
+@mixin flexy($disp: flex, $direction: null, $wrap: null, $justify: null) {
+    display: $disp;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+    justify-content: $justify;
+    @content;
+}
+
+@mixin mq($width, $size:min) {
+    @if $size == "min" {
+        @media (min-width: $width) {
+            @content;
+        } 
+    }
+    @if $size == "max" {
+        @media (max-width: $width) {
+            @content;
+        } 
+    }
+}
+
+@mixin rowstyles {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "col1 col2";
+    //padding of content and border here (remember)
+    padding: 0 2rem;
+    border-top: $border-light;
+
+
+    &:not(:last-child) {
+        border-bottom: $border-light;
+    }
+    
+    &:last-child {
+        padding-bottom: 10rem;
+    }
+    
+    
+    .col-1 {
+        grid-area: col1;
+        min-width: 0;
+    }
+    .col-2 {
+        grid-area: col2;
+        min-width: 0;
+    }
+}

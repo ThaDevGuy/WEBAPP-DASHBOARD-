@@ -1,0 +1,11 @@
+.activities {
+    @extend %col-right;
+    padding-right: 2rem;
+    @include mq($rowbreakmid) {
+        padding-right: 0;
+    }
+
+    .heading-tertiary {
+        margin-bottom: 3rem;
+    }
+}   

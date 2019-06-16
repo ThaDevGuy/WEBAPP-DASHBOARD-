@@ -1,0 +1,92 @@
+.header {
+    @include flexy();
+    align-items: center;
+    padding: 1.5rem 2rem;
+
+    &__h1 {
+        margin-right: auto;
+        padding-left: 1rem;
+    }
+
+    &-notification {
+        margin-right: 2rem;
+        padding-right: 2rem;
+        border-right: $border-dark;
+        position: relative;
+
+        .hasnotification {
+            display: block;
+            width: .8rem;
+            height: .8rem;
+            border-radius: 50%;
+            background-color: $color-accent;
+            position: absolute;
+            top: 0;
+            right: 2rem;
+        }
+
+        &__bell {
+            transition: transform 1s;
+        }
+
+        &__bell .icon-bell{
+            fill: $color-white;
+        }
+
+        &__bell:hover .icon-bell {
+            transform: scale(1.2,1.2);
+        }
+        &__bell:hover .hasnotification {
+            top:  -.5rem;
+            right: 2rem;
+        }
+    
+        
+
+    }
+    
+    &-profile {
+        @include mq(768px) {
+            @include flexy() {
+                align-items: center;
+            }
+        }
+        &__name {
+            display: none;
+            @include mq(768px) {
+                display: inline-block;
+                padding-left: 1rem;
+            }
+        }
+
+        &__image {
+            display: inline-block;
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+
+        }
+
+
+    
+    }
+
+    //Mobile Nav Menu
+    &-mobile-menu {
+        border-right: $border-dark;
+        padding-right: 1rem;
+        @include mq(768px) {
+            display: none;
+        }
+        button.back {
+            display: none;
+        }
+        
+    }
+
+    .icon {
+        width: 3rem;
+        height: 3rem;
+    }
+
+}

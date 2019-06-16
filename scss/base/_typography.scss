@@ -1,0 +1,98 @@
+.header {
+    background-color: $color-main;
+    color: $color-white;
+    box-shadow: 0px 1px 2px 0px rgba(0,0,0,.5);
+    font-family: 'Raleway', sans-serif;
+
+    &__h1 {
+        font-size: 2.2rem;
+
+        span:not(:last-child) {
+            font-weight: 400;
+        }
+
+        span:last-child {
+            font-weight: 700;
+        }
+    }
+
+    &-profile__name {
+        font-size: 1.6rem;
+        font-weight: 400;
+    }
+}
+
+.side-nav {
+    background-color: darken($color-main, 20%);
+}
+
+
+.heading-secondary {
+    font-size: 2.3rem;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+}
+
+.heading-tertiary {
+    font-size: 1.7rem;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+}
+
+.alert-box { 
+    background-color: $color-main;
+    color: $color-white;
+
+    &__info {
+        font-family: 'Crimson Text', serif;
+
+        span {
+            font-family: 'Raleway', sans-serif;
+            font-weight: 700;
+        }
+
+    }
+    
+}
+
+
+
+
+
+.social-stats {
+
+    .card__heading {
+        font-size: 1.6rem;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 500;
+        color: $color-main;
+    }
+
+    .card__followers {
+        font-size: 5rem;
+        font-family: 'Crimson Text', serif;
+        font-weight: 400;
+        @include mq(768px) {
+            font-size: 4rem;
+        }
+    }
+}
+
+
+a.list-box__text_2:link,
+a.list-box__text_2:visited {
+    color: $color-main;
+}
+
+.members,
+.activities,
+.message,
+.settings {
+    font-family: 'Crimson Text', serif;
+    font-weight: 400;
+}
+
+.form-button {
+    font-size: 1.7rem;
+    text-transform: uppercase;
+}
